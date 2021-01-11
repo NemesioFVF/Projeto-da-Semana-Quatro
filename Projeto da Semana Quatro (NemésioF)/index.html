@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="img/box3.svg">
+    <title>Projeto da Semana Quatro - Cadastro</title>
+</head>
+
+  <body>
+      <div class="conteudo">
+          <div class="div1">
+              <div class="div2">
+                  <form  class="form">
+                          <h2 id="nc" class="title"> Novo Cadastro </h2>
+                          <br>
+                          <div class="div3">
+                            <img class="div3 IMGNumeroS" src="img/box2.svg" alt="">
+                            <input type="text" required id="NumeroS" placeholder="Número de Série..." maxlength="7" autocomplete="off" onkeypress="return SomenteN(event)"/>
+                        </div>
+                          <div class="div3">
+                            <img class="div3" src="img/box1.svg" alt="">
+                            <input type="text" required id="NomeP" autocomplete="off" placeholder="Nome do Produto..." />
+                          </div>
+                          <div class="div3">
+                              <img class="div3" src="img/box.svg" alt="">
+                              <select id="TPpro" required class="div3">
+                                      <option value disabled selected>Tipo de Produto...</option>
+                                      <option value="Sapato" class="black">Sapato</option>
+                                      <option value="Smartphone" class="black">Smartphone</option>
+                                      <option value="Notebook" class="black">Notebook</option>
+                                      <option value="Livro" class="black">Livro</option>
+                                      <option value="Games" class="black">Games</option>
+                                      <option value="Console" class="black">Console</option>
+                                      <option value="Fone Hadset" class="black">Fone Hadset</option>
+                              </select>
+                          </div>
+                          <div class="div3">
+                              <img class="div3" src="img/delivery.svg" alt="">
+                              
+                              <input type="text"  required class="ValorPD" id="ValorP" autocomplete="off" placeholder="Valor do Produto..." onKeyPress="return(Moeda(this,'.',',',event))" />
+                         
+                            </div>
+                          <div class="div3">
+                              <img class="div3" src="img/clipboard.svg" alt="">
+                              <input type="text" required id="caracP" autocomplete="off" placeholder="Características do Produto..." />
+                          </div>
+                          <input type="submit"  onclick="SalvarP()" value="Cadastrar" class="btn solid" /> 
+                  </form>
+
+
+                  <form class="form1">
+                        <h2 id="h2" class="title">Lista de Produtos Cadastrados</h2>
+                          <br>
+
+                          <div class="div3">
+                            <img class="div3" src="img/search.svg" alt="">
+                            <select id="filtro" class="div3">
+                                    <option value disabled selected >Filtrar por Tipo de Produto...</option>
+                                    <option value="Sapato" class="black">Sapato</option>
+                                    <option value="Smartphone" class="black">Smartphone</option>
+                                    <option value="Notebook" class="black">Notebook</option>
+                                    <option value="Livro" class="black">Livro</option>
+                                    <option value="Games" class="black">Games</option>
+                                    <option value="Console" class="black">Console</option>
+                                    <option value="Fone Hadset" class="black">Fone Hadset</option>
+                            </select>
+                            <button class="btn" id="limpaTUDO" onclick="EXtudo()" >
+                              Excluir Lista
+                            </button>
+
+                        </div>
+
+                        <table class="TBconte">
+                              <thead id="tabela">
+                                    <tr>
+                                        <th>Número de Série</th>
+                                        <th>Nome do Produto</th>
+                                        <th>Tipo</th>
+                                        <th>Valor</th>
+                                        <th>Descrição</th>
+                                    </tr>
+                              </thead>
+                       </table>
+                  </form>
+              </div>  
+          </div>
+
+          <div class="div4">
+              <div class="panel div5">
+                  <div class="content">
+                      <h1>Consulta Lista de Produtos Cadastrados </h1>
+                      <br><br>
+                      <button class="btn" id="btnCadastroP">
+                        Produtos Cadastrados
+                      </button>
+                  </div>
+                <img src="img/add.svg" class="image" alt="" />
+              </div>
+              <div class="panel div6">
+                  <div class="content">
+                      <h1>Volte para Cadastrar Novos Produtos</h1>
+                      <br><br>
+                      <button class="btn" id="NovoPro">
+                        Cadastrar Novos Produtos
+                      </button>
+                  </div>
+                  <img src="img/receive1.svg" class="image" alt="" />
+              </div>
+          </div>
+      </div>
+      
+      <script src="script.js"></script>
+  </body>
+</html>
